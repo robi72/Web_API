@@ -1,15 +1,15 @@
 
 
 function getAllMembers() {
-    console.log("Alla medlemmar")
+    console.log("Alla members")
     makeRequest("/members", "get")
 }
 function getOneMember(name) {
-    console.log("Visa en medlem", name)
+    console.log("Show selected member", name)
     makeRequest("/members/" + name, "get")
 }
 function addNewMember() {
-    console.log("Lägg till medlem")
+    console.log("Add member")
     
     let body = {
         "name": "Sanna Andersson",
@@ -20,7 +20,7 @@ function addNewMember() {
     makeRequest("/members", "post", JSON.stringify(body))
 }
 function updateMember(name) {
-    console.log("Update medlem nr.", name)
+    console.log("Update member", name)
 
     let body = {
         "name": "Sanna Andersson",
@@ -31,7 +31,7 @@ function updateMember(name) {
     makeRequest("/members/" + name, "put", JSON.stringify(body))
 }
 function removeMember(name) {
-    console.log("Ta bort medlem ", name)
+    console.log("Delete medlem ", name)
 
     makeRequest("/members/" + name, "delete")
 }
