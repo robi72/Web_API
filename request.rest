@@ -1,0 +1,39 @@
+GET http://localhost:3000/members
+
+###
+
+GET http://localhost:3000/members/4
+
+###
+
+POST http://localhost:3000/members/
+Content-Type: application/json
+
+{
+    "name": "Sanna Andersson",
+    "city": "Göteborg",
+    "phone": "044-444444"
+  }
+
+###
+
+PUT http://localhost:3000/members/4
+Content-Type: application/json
+
+{
+    
+    "name": "Sanna Andersson",
+    "city": "Mölndal",
+    "phone": "044-444444"
+}
+
+
+###
+
+DELETE http://localhost:3000/members/4
+Content-Type: application/json
+
+
+{}
+
+

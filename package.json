@@ -1,0 +1,22 @@
+{
+  "name": "web_api",
+  "version": "1.0.0",
+  "description": "Hemsida som visar information hämtat ifrån egenbyggda API samt ifrån ett valfritt externt API. \r Egna API skall vara en Express-server byggd i NodeJS som hanterar en valfri resurs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robi72/Web_API.git"
+  },
+  "author": "Robert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robi72/Web_API/issues"
+  },
+  "homepage": "https://github.com/robi72/Web_API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
