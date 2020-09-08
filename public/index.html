@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
-   <!--  <script src="./logic1.js"></script> -->
     <script src="./logic.js"></script>
     <title>Club members</title>
 </head>
 <body>
     <div class="container">
-        
-        
-    
-        <!-- 
-    <button onclick="getOneMember('Oskar Jacobsson')">Get selected member</button>
-    <form submit="/members" method="post">
-        name: <input name="name" type="text" /> <br />
-        city: <input name="city" type="text" /> <br />
-        phone: <input name="phone" type="tel" pattern="[0-9]{4}-[0-9]{6}" placeholder="xxxx-xxxxxx" required /> <br />
-        <input type="submit" />
-    </form>
+    <button onclick="getAllMembers()">All members</button>    
+    <button onclick="getOneMember('Oscar Jacobsson')">Get selected member</button>
     <button onclick="addNewMember()">Save member</button>
     <button onclick="updateMember('Sanna Andersson')">Update member</button>
     <button onclick="removeMember('Sanna Andersson')">Delete member</button>
--->
+    
+    <!-- <form submit="/members" method="post">
+        name: <input name="name" type="text" /> <br />
+        city: <input name="city" type="text" /> <br />
+        mobile: <input name="mobile" type="tel" pattern="[0-9]{4}-[0-9]{6}" placeholder="xxxx-xxxxxx" required /> <br />
+        <input type="submit" />
+    </form> -->
 
-<h4>List of club members:</h4><button class="btn btn-primary"  onclick="getAllMembers()">Press</button>
+
+    <h4>List of club members:</h4>
+
+<!-- <button class="btn btn-primary"  onclick="getAllMembers()">Press</button> -->
+
     <hr>
     <div>
         <div class="row" id="members"></div>
@@ -44,35 +44,35 @@
 
 <form action="./member" method="POST">
         <div class="form-group"  >
-            <label for="name" class="col-sm-2 control-label">Name</label>
+            <label for="name" class="col-sm-2 control-label">Name:</label>
             <div class="col-sm-10">
-                <input class="form-control input-sm" name="name" required>
+                <input class="form-control input-sm" name="name" type="text" required>
             </div>
         </div>
         
         <div class="form-group">
-            <label for="street" class="col-sm-2 control-label">Street</label>
+            <label for="street" class="col-sm-2 control-label">Street:</label>
             <div class="col-sm-10">  
-                <input class="form-control input-sm" name="street" required>
+                <input class="form-control input-sm" name="street" type="text" required>
             </div>
         </div>  
 
         <div class="form-group">
-            <label for="city" class="col-sm-2 control-label">City</label>
+            <label for="city" class="col-sm-2 control-label">City:</label>
             <div class="col-sm-10">  
-                <input class="form-control input-sm" name="city" required>
+                <input class="form-control input-sm" name="city" type="text" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="phone" class="col-sm-2 control-label">Phone</label>
+            <label for="mobile" class="col-sm-2 control-label">Mobile:</label>
             <div class="col-sm-10">   
-                <input class="form-control input-sm" name="phone" required type="number" min="0"> 
+                <input class="form-control input-sm" name="mobile" required type="number" min="0"> 
             </div>
         </div>
         <div></div>
         <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary col-sm-2 control-label">Submit</button>
+        <button type="submit" class="btn btn-primary col-sm-2 control-label ">Submit</button>
         </div>
     </form>
 

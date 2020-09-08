@@ -8,9 +8,12 @@
     
         // Printa ut alla användare ifrån collectedUsers
         console.log(collectedUsers)
+        
+        document.getElementById('members').innerHTML = []
 
         for (let member of members) {
-            const x = `
+            
+            let x = `
                 <div class="col-4">
                     <div class="card">
                         <div class="card-body">
@@ -18,7 +21,7 @@
     
                             <div>Street: ${member.street}</div>
                             <div>City: ${member.city}</div>
-                            <div>Phone: ${member.phone}</div>
+                            <div>Mobile: ${member.mobile}</div>
     
                            
     
@@ -53,7 +56,7 @@ function addNewMember() {
         "name": "Sanna Andersson",
         "street": "Mölndalsvägen 13",
         "city": "Göteborg",
-        "phone": "044444444"
+        "mobile": "0707444444"
     } 
     makeRequest("/members", "post", JSON.stringify(body))
 }
@@ -64,13 +67,13 @@ function updateMember(name) {
         "name": "Sanna Andersson",
         "street": "Göteborgsvägen 56",
         "city": "Mölndal",
-        "phone": "044444444"
+        "mobile": "0707444444"
     }
 
     makeRequest("/members/" + name, "put", JSON.stringify(body))
 }
 function removeMember(name) {
-    console.log("Delete medlem ", name)
+    console.log("Delete member ", name)
 
     makeRequest("/members/" + name, "delete")
 }

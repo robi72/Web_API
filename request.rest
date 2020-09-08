@@ -2,7 +2,7 @@ GET http://localhost:3000/members
 
 ###
 
-GET http://localhost:3000/members/Anna Svensson
+GET http://localhost:3000/members/Oscar Jacobsson
 
 ###
 
@@ -12,7 +12,7 @@ Content-Type: application/json
 {   "name": "Sanna Andersson",
     "street": "Landvägen 38",
     "city": "Göteborg",
-    "phone": "044444444"
+    "mobile": "0707444444"
   }
 
 ###
@@ -24,7 +24,7 @@ Content-Type: application/json
     "name": "Sanna Andersson",
     "street": "Fabriksgatan 45",
     "city": "Mölndal",
-    "phone": "044-444444"
+    "mobile": "0707444444"
 }
 
 

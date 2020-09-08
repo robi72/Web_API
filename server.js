@@ -14,19 +14,19 @@ let members = [
         name: "Anna Svensson",
         street: "Ekvägen 8",
         city: "Oskarshamn",
-        phone: "011111111"
+        mobile: "0707111111"
     }, 
     {   
         name: "Stefan Johansson",
         street: "Bokvägen 1",
         city: "Halmstad",
-        phone: "022222222"
+        mobile: "0707222222"
     },     
     {   
-        name: "Oskar Jacobsson",
+        name: "Oscar Jacobsson",
         street: "Aspvägen 6",
         city: "Borås",
-        phone: "033333333"
+        mobile: "0707333333"
     }, 
     
 ]
