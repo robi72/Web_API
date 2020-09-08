@@ -8,7 +8,7 @@
     
         // Printa ut alla användare ifrån collectedUsers
         console.log(collectedUsers)
-        
+
         document.getElementById('members').innerHTML = []
 
         for (let member of members) {
@@ -24,11 +24,6 @@
                             <div>Mobile: ${member.mobile}</div>
     
                            
-    
-                            <button type="button" class="glyphicon glyphicon-trash"></button>
-                            <button types="button" class="glyphicon glyphicon-pencil" data-toggle="modal"
-                                data-target="#editBookModal" onClick="setEditModal(${member.name})">
-                            </button>
                             <hr>
                         </div>
                     </div>
