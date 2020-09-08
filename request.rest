@@ -2,27 +2,27 @@ GET http://localhost:3000/members
 
 ###
 
-GET http://localhost:3000/members/4
+GET http://localhost:3000/members/Anna Svensson
 
 ###
 
 POST http://localhost:3000/members/
 Content-Type: application/json
 
-{
-    "name": "Sanna Andersson",
+{   "name": "Sanna Andersson",
+    "street": "Landvägen 38",
     "city": "Göteborg",
-    "phone": "044-444444"
+    "phone": "044444444"
   }
 
 ###
 
-PUT http://localhost:3000/members/4
+PUT http://localhost:3000/members/Sanna Andersson
 Content-Type: application/json
 
 {
-    
     "name": "Sanna Andersson",
+    "street": "Fabriksgatan 45",
     "city": "Mölndal",
     "phone": "044-444444"
 }
@@ -30,7 +30,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/members/4
+DELETE http://localhost:3000/members/Sanna Andersson
 Content-Type: application/json
 
 

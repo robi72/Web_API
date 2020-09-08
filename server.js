@@ -1,31 +1,40 @@
 const express = require('express')
 const { json } = require('express')
 const app = express()
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(express.json())
 app.use(express.static('public'))
 
 let members = [
-    {
+    {   
         name: "Anna Svensson",
+        street: "Ekvägen 8",
         city: "Oskarshamn",
-        phone:"011-111111"
+        phone: "011111111"
     }, 
-    {
+    {   
         name: "Stefan Johansson",
+        street: "Bokvägen 1",
         city: "Halmstad",
-        phone: "022-222222"
-    }, 
-    {
+        phone: "022222222"
+    },     
+    {   
         name: "Oskar Jacobsson",
+        street: "Aspvägen 6",
         city: "Borås",
-        phone: "033-333333"
+        phone: "033333333"
     }, 
     
 ]
 
 app.get("/members", (req, res) => {
     res.json(members)
+
+    
 })
 
 app.get("/members/:name", (req, res) => {
@@ -44,6 +53,14 @@ app.post("/members", (req,res) => {
     res.json({status: "New member created"})
 })
 
+app.post('/member', (req, res) => {
+    const member = req.body;
+
+    console.log(member);
+    members.push(member);
+
+    res.send('New member added');
+});
 app.put("/members/:name", [checkIfMemberExists], (req, res) => {
     members[req.foundMemberIndex] = req.body
     res.json({status: "Member updated"})
