@@ -4,3 +4,7 @@
 body, html {
     padding: 10px;
 }
+
+#submitButton {
+    padding-bottom: 20px;
+}
