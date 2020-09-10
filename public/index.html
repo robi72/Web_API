@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="container">
-    <button onclick="getAllMembers()">All members</button>    
-    <button onclick="getOneMember('Oscar Jacobsson')">Get selected member</button>
+    <button onclick="getAllMembers()" class="btn btn-primary" >All members</button>    
+  <!--   <button onclick="getOneMember('Oscar Jacobsson')">Get selected member</button>
     <button onclick="addNewMember()">Save member</button>
     <button onclick="updateMember('Sanna Andersson')">Update member</button>
-    <button onclick="removeMember('Sanna Andersson')">Delete member</button>
+    <button onclick="removeMember('Sanna Andersson')">Delete member</button> -->
     
     <!-- <form submit="/members" method="post">
         name: <input name="name" type="text" /> <br />
@@ -42,7 +42,10 @@
     </div>
 </div>
 
-<form action="./member" method="POST">
+
+
+
+<form action="./members" method="post">
         <div class="form-group"  >
             <label for="name" class="col-sm-2 control-label">Name:</label>
             <div class="col-sm-10">
@@ -72,26 +75,24 @@
         </div>
         <div></div>
         <div class="col-sm-10" id="submitButton">
-        <button type="submit" class="btn btn-primary col-sm-2 control-label ">Submit</button>
+        <button type="submit" class="btn btn-primary col-sm-2 control-label " onclick="addNewMember()">Submit</button>
         </div>
     </form>
 
     
 </div>
 
-<div>
-    <form>
-        <div class="form-group">
-            <hr>
-            <h2>Facts about countries</h2>
-          <input type="text" id="country" placeholder="country" required>
-          <input type="submit" value="Get data">
+<hr>
+
+
+<div class="form-group">
+                <p>   Want more jokes? Click on Chuck  </p>
+                <img src="img/chuck.jpg" onclick="ChuckNorrisJoke()">
+            </label>
         </div>
-      </form>
-      <div id="country"></div>
-      <div id="captol"></div>
-      <div id="population"></div>
+        <div id="Chuck"></div>
 </div>
+
 
 </body>
 </html>

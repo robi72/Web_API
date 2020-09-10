@@ -44,16 +44,21 @@ function getOneMember(name) {
     console.log("Show selected member", name)
     makeRequest("/members/" + name, "get")
 }
-function addNewMember() {
-    console.log("Add member")
+function addNewMember(e) {
+    e.preventDefault()
 
-   let body = {
-        "name": "Sanna Andersson",
-        "street": "Mölndalsvägen 13",
-        "city": "Göteborg",
-        "mobile": "0707444444"
+    let name = document.getElementById("name").value
+    let street = document.getElementById("street").value
+    let city = document.getElementById("city").value
+    let mobile = document.getElementById("mobile").value
+
+   let collectedUsers = {
+        "name": name,
+        "street": street,
+        "city": city,
+        "mobile": mobile,
     } 
-    makeRequest("/members", "post", JSON.stringify(body))
+    makeRequest("/member", "post", collectedUsers)
 }
 function updateMember(name) {
     console.log("Update member", name)
@@ -87,4 +92,15 @@ async function makeRequest(url, reqMethod, body) {
     return data
 
     console.log(data)
+}
+
+
+const url = 'http://api.icndb.com/jokes/random'
+
+async function ChuckNorrisJoke(){
+    const response = await fetch(url);
+    const data = await response.json()
+    console.log(data.value.joke)
+
+    document.getElementById("Chuck").innerText = data.value.joke
 }
