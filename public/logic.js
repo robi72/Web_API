@@ -47,10 +47,10 @@ function getOneMember(name) {
 function addNewMember(e) {
     e.preventDefault()
 
-    let name = document.getElementById("name").value
-    let street = document.getElementById("street").value
-    let city = document.getElementById("city").value
-    let mobile = document.getElementById("mobile").value
+    let name = document.getElementById("inputName").value
+    let street = document.getElementById("inputStreet").value
+    let city = document.getElementById("inputCity").value
+    let mobile = document.getElementById("inputMobile").value
 
    let collectedUsers = {
         "name": name,
@@ -102,5 +102,5 @@ async function ChuckNorrisJoke(){
     const data = await response.json()
     console.log(data.value.joke)
 
-    document.getElementById("Chuck").innerText = data.value.joke
+    document.getElementById("chuck").innerText = data.value.joke
 }
