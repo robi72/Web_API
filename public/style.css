@@ -8,3 +8,7 @@ body, html {
 #submitButton {
     padding-bottom: 20px;
 }
+
+#chuck {
+    background-color: rgb(228, 231, 20);
+}
