@@ -1,10 +1,8 @@
 const express = require('express')
-const { json } = require('express')
 const app = express()
-const bodyParser = require('body-parser')
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({
+  extended: true
+}))
 
 app.use(express.json())
 app.use(express.static('public'))
@@ -59,7 +57,7 @@ app.post('/member', (req, res) => {
     console.log(member);
     members.push(member);
 
-    res.send('New member added');
+    res.redirect('./');
 });
 app.put("/members/:name", [checkIfMemberExists], (req, res) => {
     members[req.foundMemberIndex] = req.body
